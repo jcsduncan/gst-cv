@@ -1,0 +1,14 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+libdir=@libdir@
+includedir=@includedir@
+pluginsdir=${pluginsdir}
+datadir=@datadir@
+girdir=${datadir}/gir-1.0
+typelibdir=@typelibdir@
+
+Name: GStreamer Computer Vision Libraries
+Description: Computer Vision Libraries
+Requires: gstreamer-@GST_API_VERSION@ gstreamer-base-@GST_API_VERSION@
+Version: @VERSION@
+Libs: -L${libdir} -l@LIB_GST_CV@
+Cflags: -I${includedir}
